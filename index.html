@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Micro Vest - Order Now</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Micro Vest Microgreens</h1>
+  <p>Fresh, healthy & locally grown microgreens.</p>
+</header>
+
+<section id="products">
+  <h2>Our Products</h2>
+  <div class="product-list">
+    <div class="product">
+      <h3>Kolmi Sakh</h3>
+      <p>Fresh and nutritious.</p>
+      <button onclick="addToOrder('Kolmi Sakh')">Order Now</button>
+    </div>
+    <div class="product">
+      <h3>Lal Sakh</h3>
+      <p>Rich in vitamins & minerals.</p>
+      <button onclick="addToOrder('Lal Sakh')">Order Now</button>
+    </div>
+  </div>
+</section>
+
+<section id="order-form">
+  <h2>Place Your Order</h2>
+  <form id="orderForm" action="https://formspree.io/f/mblaaney" method="POST">
+    <input type="hidden" name="product" id="selectedProduct">
+    <label>Name:</label>
+    <input type="text" name="name" required>
+    <label>Email:</label>
+    <input type="email" name="email" required>
+    <label>Phone:</label>
+    <input type="tel" name="phone" required>
+    <label>Address:</label>
+    <textarea name="address" required></textarea>
+    <label>Payment Method:</label>
+    <select name="payment" required>
+      <option value="COD">Cash on Delivery</option>
+    </select>
+    <button type="submit">Submit Order</button>
+  </form>
+</section>
+
+<section id="order-tracker">
+  <h2>Track Your Order</h2>
+  <input type="text" id="trackerId" placeholder="Enter Order ID">
+  <button onclick="trackOrder()">Track</button>
+  <p id="orderStatus"></p>
+</section>
+
+<section id="reviews">
+  <h2>Customer Reviews</h2>
+  <div id="reviewList"></div>
+  <form id="reviewForm">
+    <input type="text" id="reviewer" placeholder="Your Name" required>
+    <textarea id="reviewText" placeholder="Your Review" required></textarea>
+    <button type="submit">Submit Review</button>
+  </form>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
