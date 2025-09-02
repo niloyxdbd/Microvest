@@ -1,0 +1,9 @@
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; }
+header { background:#4CAF50; color:white; text-align:center; padding:2rem; }
+h2 { margin-top:2rem; }
+section { padding:1rem 2rem; }
+.product-list { display:flex; gap:2rem; }
+.product { background:white; padding:1rem; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); flex:1; text-align:center;}
+button { background:#4CAF50; color:white; padding:0.5rem 1rem; border:none; border-radius:5px; cursor:pointer; }
+button:hover { background:#45a049; }
+input, textarea, select { display:block; width:100%; margin-bottom:1rem; padding:0.5rem; border-radius:5px; border:1px solid #ccc; }
